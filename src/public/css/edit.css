@@ -1,0 +1,86 @@
+.target-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 150px); 
+}
+
+.target-card {
+  margin-top: 40px;
+}
+
+
+
+.target-card {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  width: 380px;
+}
+
+
+
+.target-title {
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+/* 入力欄 */
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.target-input {
+  width: 200px;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.unit {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+/* エラー */
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+/* ボタン */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-back {
+  width: 140px;
+  padding: 10px 0;
+  background: #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.btn-update {
+  width: 140px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(90deg, #8ec5fc, #f9a8d4);
+}

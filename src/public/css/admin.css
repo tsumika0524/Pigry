@@ -1,0 +1,363 @@
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #f7f7f7;
+    color: #555;
+}
+
+/* ===== ヘッダー ===== */
+.header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+}
+
+.header-inner {
+  width: 100%;
+  padding: 15px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logo {
+  font-size: 36px;
+  margin: 0;
+  color: #f4a6c1 !important;
+}
+
+.header-actions {
+  margin-left: auto;
+  padding-right: 12px; /* 右余白 */
+  display: flex;
+  gap: 10px;           /* ボタン間の余白 */
+}
+
+
+
+/* ===== 共通 ===== */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.btn-outline {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.btn-gradient {
+    background: linear-gradient(45deg, #f4a6c1, #cfa0ff);
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-gray {
+    background: #aaa;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.btn-reset{
+  height: 36px;
+  padding: 0 18px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  background: #fff;
+  color: #777;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-reset:hover{
+  border-color: #cfcfcf;
+  color: #555;
+  background: #fafafa;
+}
+
+
+/* ===== サマリー ===== */
+.summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: #fff;
+    flex: 1;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.summary-card .label {
+    font-size: 14px;
+    color: #999;
+}
+
+.summary-card .value {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* ===== テーブル ===== */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.filters input {
+    padding: 6px;
+    margin-right: 5px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    color: #cfa0ff;
+    padding-bottom: 10px;
+}
+
+.table td {
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+}
+
+.edit {
+    color: #cfa0ff;
+    cursor: pointer;
+}
+
+/* ===== モーダル ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  width: 520px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+.required {
+  background: #ff5a5a;
+  color: #fff;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-back {
+  background: #ccc;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+}
+
+.btn-submit {
+  background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+}
+
+.error {
+  color: #ff5a5a;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #b0b0b0;
+}
+
+.input-unit{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-unit input{
+  flex: 1;
+}
+
+.input-unit .unit{
+  color: #666;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+
+/* ===== 横はみ出し完全対策 ===== */
+
+/* 全体を border-box に */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* container に左右余白を持たせる */
+.container {
+  padding: 0 16px;
+}
+
+/* summary を小画面で折り返す */
+.summary {
+  flex-wrap: wrap;
+}
+
+/* header-inner のはみ出し防止 */
+.header-inner {
+  box-sizing: border-box;
+}
+
+/* 念のため最終保険 */
+body {
+  overflow-x: hidden;
+}
+
+/* ===== ページネーション（参考UI風） ===== */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ul */
+.pagination nav > div:first-child {
+  display: none; /* ← Showing 〜 results を消す */
+}
+
+/* 数字の部分 */
+.pagination nav > div:last-child {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* links の親 */
+.pagination ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* li */
+.pagination li {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* a/span 共通 */
+.pagination a,
+.pagination span {
+  font-size: 16px;
+  color: #555;
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* 数字 */
+.pagination .page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  padding: 0 6px;
+}
+
+/* active（今のページ） */
+.pagination .active .page-link,
+.pagination .active span {
+  background: #f4a6c1;
+  color: #fff;
+}
+
+/* 矢印 < > */
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+  background: transparent;
+  border: none;
+  min-width: auto;
+  height: auto;
+  padding: 0;
+  font-size: 18px;
+}
+
+/* disabled */
+.pagination .disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+
+
+

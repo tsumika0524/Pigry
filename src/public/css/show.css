@@ -1,0 +1,111 @@
+/* すべて border-box にする（はみ出し完全防止） */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 全体背景 */
+.edit-wrapper {
+  background: #fafafa;
+  padding: 30px 16px;
+  overflow-x: hidden;   /* ← 横スクロール強制防止 */
+}
+
+/* 中央カード */
+.edit-card {
+  width: 600px;
+  max-width: 100%;      /* ← ここが決定打 */
+  margin: auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+
+/* タイトル */
+.edit-card h2 {
+  margin-bottom: 30px;
+}
+
+/* ラベル */
+.edit-card label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* input */
+.edit-card input,
+.edit-card textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+/* 単位付き入力 */
+.input-unit {
+  display: flex;
+  align-items: center;
+}
+
+.input-unit input {
+  flex: 1;
+}
+
+.input-unit span {
+  margin-left: 8px;
+  color: #888;
+}
+
+/* textarea */
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* エラーメッセージ */
+.error {
+  color: #ff5a5a;
+  font-size: 13px;
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
+/* ボタンエリア */
+.edit-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* 戻る */
+.btn-back {
+  background: #ddd;
+  color: #333;
+  padding: 10px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* 更新 */
+.btn-update {
+  background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+}
+
+/* 削除 */
+.btn-delete {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #ff5a5a;
+  cursor: pointer;
+}
