@@ -32,14 +32,10 @@ php artisan db:seed<br>
 ・トップページ(管理画面)ːhttp://localhost/weight_logs<br>
 ・体重登録ːhttp://localhost/weight_logs/create<br>
 ・体重検索ːhttp://localhost/weight_logs/search<br>
-・体重詳細ːhttp://weight_logs/{:weightLogId}<br>
-・体重更新ːhttp://weight_logs/{:weightLogId}/update<br>
-・体重削除ːhttp://weight_logs/{:weightLogId}/delete<br>
 ・目標設定ːhttp://localhost/wight_logs/goal_setting<br>
 ・会員登録ːhttp://localhost/register/step1<br>
 ・初期目標体重登録ːhttp://localhost/register/step2<br>
 ・ログインːhttp://localhost/login<br>
-・ログアウトːhttp://localhost/logout<br>
 
 ##### 使用技術(実行環境)
 ・PHP 8.4.13<br>
